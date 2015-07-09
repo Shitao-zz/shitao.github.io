@@ -4,25 +4,28 @@ title: A simple way to use jekyll plugins on GitHub Pages
 tags: [jekyll,plugins,GitHub]
 ---
 
-> [GitHub Pages] provide user a decent way to publish their static webpage or log. As we al know, custom plugins are disabled when the `safe` mode is on. Here, I would like to illustrate a simple to allow jekyll plugins in the [GitHub Pages]. 
-
-[GitHub Pages]: http://pages.github.com/ 
+> [GitHub Pages] provide user a decent way to publish their static web pages or
+> blogs. As we all know, custom plugins are disabled when the `safe` mode is on.
+> Here, I would like to illustrate a simple way to allow jekyll plugins in the
+> [GitHub Pages]. 
 
 The solution is as follows: build a `master` branch with compiled website and `source` branch with all our website sources. 
 
-### Step1: Build a github repository for the webpages
+### Step1: Build a [GitHub] repository for the web pages
 
-Here, I illustrate an example to publish a webpage using the special repository dedicated to the Github pages files. This special repository mush be named like `username.github.io`.
+Here, I illustrate an example to publish a web using the special repository
+dedicated to the [GitHub Pages] files. This special repository mush be named as `username.github.io`.
 
 ### Step2: Prepare the repository
-Creat a `source` branch in our repository to store all the webpages sources.
+Create a `source` branch in our repository to store all the web pages sources.
     $ git checkout -b source master
     $ git push -u origin source
-Make the `source` branch _default_ on your Github.
+Make the `source` branch _default_ on your GitHub.
 
-### Step3: Rakefile to publish webpages automatically
+### Step3: Rakefile to publish web pages automatically
 
-Now, you can push your compiled `sources` into the master branch to pulish. Use the Rakefile as follows will automatically publish your webpages.
+Now, you can push your compiled `sources` into the master branch to publish. Use
+the following Rakefile will automatically publish your web pages.
 
 {%highlight ruby%}
 require 'rubygems'
@@ -41,7 +44,6 @@ task :generate do
   })).process
 end
 
-
 desc "Generate and publish blog to gh-pages"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
@@ -59,4 +61,10 @@ task :publish => [:generate] do
 end
 task :default => :publish
 {%endhighlight%}
-Then, you can run `rake publish` to compile and publish your website to Github pages.
+Then, you can run `rake publish` to compile and publish your website to [GitHub Pages].
+
+[GitHub Pages]: http://pages.github.com/ 
+[GitHub]: http://github.com/ 
+
+
+
