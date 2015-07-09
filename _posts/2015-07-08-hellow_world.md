@@ -1,13 +1,16 @@
 ---
 layout: post
 title: Hello world
-tags: [jekyll,blogging]
+tags: [markdown,pygments,mathjax]
 ---
->Hellow world! Examples of code highlight and latex syntax.Hellow world!
-Examples of code highlight and latex syntax.Hellow world! Examples of code
-highlight and latex syntax.
+>Hellow world! Examples of code highlight and latex syntax.
 
-## Code test:
+This example examines thh [pygments] highlight function and [Mathjax] for latex enable,
+
+[pygments]: http://pygments.org/
+[Mathjax]: https://www.mathjax.org/
+
+## Matlab code test:
 {% highlight matlab %}
 clear;
 clc;
