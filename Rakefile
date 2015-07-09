@@ -27,7 +27,6 @@
         system "git commit -am #{message.shellescape}"
         system "git push origin master --force"
         system "git checkout master"
-        system "echo yolo"
       end
     end
 
