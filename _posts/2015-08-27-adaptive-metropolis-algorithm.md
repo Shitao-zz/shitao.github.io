@@ -25,17 +25,23 @@ fail because it may put a lot probability mass in the low dimension part.
 MCMC: The algorithm trys to move to a region of high probability and then trys
 to stay near the high probability region.
 
-## Algorithm
+### Algorithm
 
 At time $t-1$, we have sampled the states $X_0,X_1,\ldot,X_{t-1}$. A candidate
 point $Y$ is sampled from a proposal distribution
 $q_t(\cdot|X_0,\ldot,X_{t-1})$.
+The accept criteria for Y is as follows:
+$$\alpha(X_{t-1},Y)=min(1,\frac{\pi(Y)}{\pi(X_{t-1})})$$
+in which case we set $X_t=Y$, and otherwise $X_t = X{t-1}$
 
-### Step2: Adaptive Metropolis
+## Adaptive Metropolis
 
 The basic idea is to update the proposal distribution by using the knowledge we
 have so far or how the covariance of the proposal distribution depends on the
 history of the clain.
+
+### Algorithm
+
 
 ### Reference
 
