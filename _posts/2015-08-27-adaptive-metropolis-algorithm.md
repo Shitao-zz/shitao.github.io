@@ -34,7 +34,7 @@ The accept criteria for Y is as follows:
 
 $$\alpha(X_{t-1},Y)=min(1,\frac{\pi(Y)}{\pi(X_{t-1})})$$
 
-in which case we set $$X_t=Y$$, and otherwise $$X_t = X{t-1}$$.
+in which case we set $$X_t=Y$$, and otherwise $$X_t = X_{t-1}$$.
 
 ## Adaptive Metropolis
 
@@ -49,7 +49,7 @@ Here, $$q_t(\cdot|X_0,...,X_{t-1})$$ is a Gaussian distribution with mean at
 the current point $$X_{t-1}$$ and covariance $$C_t=C_t(X_0,...,X_{t-1})$$.
 
 The chain history dependent covariance can be setted to
-$$C_t=s_d cov(X_0,\ldot,X_{t-1})+s_d e I_d$$ where $$s_d$$ is a parameter
+$$C_t=s_d cov(X_0,...,X_{t-1})+s_d e I_d$$ where $$s_d$$ is a parameter
 that depends only on dimension $$d$$, $$e>0$$ is a very small
 constant and $$I_d$$ denotes the d-dimensional identity matrix.
 
