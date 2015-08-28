@@ -27,9 +27,9 @@ to stay near the high probability region.
 
 ### Algorithm
 
-At time $$t-1$$, we have sampled the states $$X_0,X_1,\ldot,X_{t-1}$$. A candidate
+At time $$t-1$$, we have sampled the states $$X_0,X_1,...,X_{t-1}$$. A candidate
 point $$Y$$ is sampled from a proposal distribution
-$$q_t(\cdot|X_0,\ldot,X_{t-1})$$.
+$$q_t(\cdot|X_0,...,X_{t-1})$$.
 The accept criteria for Y is as follows:
 
 $$\alpha(X_{t-1},Y)=min(1,\frac{\pi(Y)}{\pi(X_{t-1})})$$
@@ -45,12 +45,12 @@ history of the chain.
 ### Algorithm
 
 The proposal distribution now will depend on the history the sampled state.
-Here, $$q_t(\cdot|X_0,\ldot,X_{t-1})$$ is a Gaussian distribution with mean at
-the current point $$X_{t-1}$$ and covariance $$C_t=C_t(X_0,\ldot,X_{t-1})$$.
+Here, $$q_t(\cdot|X_0,...,X_{t-1})$$ is a Gaussian distribution with mean at
+the current point $$X_{t-1}$$ and covariance $$C_t=C_t(X_0,...,X_{t-1})$$.
 
 The chain history dependent covariance can be setted to
-$$C_t=s_d cov(X_0,\ldot,X_{t-1})+s_d\epsilonI_d$$ where $$s_d$$ is a parameter
-that depends only on dimension $$d$$, $$\epsilon>0$$ is a very small
+$$C_t=s_d cov(X_0,\ldot,X_{t-1})+s_d e I_d$$ where $$s_d$$ is a parameter
+that depends only on dimension $$d$$, $$e>0$$ is a very small
 constant and $$I_d$$ denotes the d-dimensional identity matrix.
 
 ### Reference
