@@ -25,6 +25,10 @@ the total number of summands is $$2^n$$.
 
 Some defination of ANOVA-representation:
 
+$$ u(\bm \xi)=\sum_{ \mathfrak i \subseteq \mathfrak D} u_{\mathfrak i}(\bm
+         \xi_{\mathfrak i}), \qquad \mbox{where}\ \
+		         \mathfrak D=\{1,\ldots,d\}$$
+
 ### Monte-Carlo estimate
 
 
