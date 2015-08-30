@@ -11,6 +11,7 @@ Most of the notations and concepts here are following Haario et al. 2001.
 
 ## Variance-based method 
 Consider an square integrable function $$f(x)$$ in the form
+(ANOVA-representation)
 
 $$\begin{split}
 u(\bm \xi)=u(\xi_1,\ldots,\xi_k) =
@@ -21,7 +22,11 @@ u(\bm \xi)=u(\xi_1,\ldots,\xi_k) =
 						\end{split}$$
 
 the total number of summands is $$2^n$$.
+
+Some defination of ANOVA-representation:
+
 ### Monte-Carlo estimate
+
 
 
 ### Polynomila Chaos expansion estimate
