@@ -49,12 +49,15 @@ $$\int_{U^{d+|i \sim|}} f(x_i,x_{i\sim})f(x_i,x_{i\sim}')dx_i
 dx_{i\sim}dx_{i\sim}'
 =\int_{U^{|\mathfrak i|}}dx_i \int_{U^{|i\sim|}} f(x_i,x_{i\sim})dx_{i\sim} 
 \int_{U^{|i\sim|}} f(x_i,x_{i\sim}')dx_{i\sim}'
-=\int_{U^|i|}dx_i[\int_{U^|i\sim|}f(x_i,x_{i\sim})dx_{i\sim}]^2
+=\int_{U^{|i|}}dx_i[\int_{U^{|i\sim|}}f(x_i,x_{i\sim})dx_{i\sim}]^2
 $$ 
 
 $$
 \mathbb E[\mathbb E[f|x_i]^2]=lim\limits_{M\rightarrow \infty}
-\frac{1}{M}\sum\limits_{l=1}^M f(x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})f(\tilde x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})
+$$
+
+$$
+\frac{1}{M}\sum\limits_{l=1}^M f(x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})f(\tilde{x}_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})
 $$
 
 $$x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)}\ \mbox{and}\ \tilde x_{\{i\}\sim}^{(l)}$$
