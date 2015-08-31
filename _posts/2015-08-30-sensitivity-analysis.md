@@ -22,6 +22,16 @@ u_{i,j,k}(\xi_i,\xi_j,\xi_k)+\cdots+u_{1,\ldots,d}(\xi_1,\ldots,\xi_d)
 
 the total number of summands is $$2^n$$.
 
+
+### Monte-Carlo estimate
+
+The estimation of conditiona variance $$V(E(Y|X_i))$$ using brute-force
+Monte-Carlo could be impractical. For example, $$E(Y|X_i)$$ need to be estimated
+first with a set of Monte-Carlo points for a fixed value of $$X_i$$, and then
+this process will be repeated for different $$X_i$$ values. $$10^6$$ simulations
+will be needed if 1000 points were used to get a good estimate of the
+conditional mean $$E(Y|X_i)$$, and the procedure were repeated 1000 times. 
+
 1-st order sensitivity indices:
 
 $$
@@ -42,15 +52,12 @@ dx_{i\sim}dx_{i\sim}'
 =\int_{U^|i|}dx_i[\int_{U^|i\sim|}f(x_i,x_{i\sim})dx_{i\sim}]^2
 $$ 
 
+$$
+\mathbb E[\mathbb E[f|x_i]^2]=lim\limits_{M\rightarrow \infty}
+\frac{1}{M}\sum\limits_{l=1}^M f(x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})f(\tilde x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})
+$$
 
-### Monte-Carlo estimate
-
-The estimation of conditiona variance $$V(E(Y|X_i))$$ using brute-force
-Monte-Carlo could be impractical. For example, $$E(Y|X_i)$$ need to be estimated
-first with a set of Monte-Carlo points for a fixed value of $$X_i$$, and then
-this process will be repeated for different $$X_i$$ values. $$10^6$$ simulations
-will be needed if 1000 points were used to get a good estimate of the
-conditional mean $$E(Y|X_i)$$, and the procedure were repeated 1000 times. 
-
+$$x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)}\ \mbox{and}\ \tilde x_{\{i\}\sim}^{(l)}$$
+are independent samples.
 
 ### Polynomila Chaos expansion estimate
