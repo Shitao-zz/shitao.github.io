@@ -22,14 +22,21 @@ u_{i,j,k}(\xi_i,\xi_j,\xi_k)+\cdots+u_{1,\ldots,d}(\xi_1,\ldots,\xi_d)
 
 the total number of summands is $$2^n$$.
 
-Some defination of ANOVA-representation:
-
 1-st order sensitivity indices:
 
 $$
- S_{i}(f) = \frac{\mathbb V[f_{i}]}{\mathbb V[f]} 
+ S_{\{i\}}(f) = \frac{\mathbb V[f_{\{i\}}]}{\mathbb V[f]} 
  = \frac{\mathbb V[\mathbb E[f|x_i]]}{\mathbb V[f]}
+ = \frac{\mathbb E[\mathbb E[f|x_i]^2] -\mathbb E[\mathbb E[f|x_i]]^2}{\mathbb
+ V[f]}
 $$
+
+Note that $$\mathbb E[\mathbb E[f|x_i]]=\mathbb E[f]$$ and $$\mathbb E[f]$$ and
+$$\mathbb V[f]$$ can be estimated using Monte-Carlo approach. 
+$$\mathbb E[\mathbb E[f|x_i]^2]$$ remains to be calculated.
+
+$$\int_{\mathbb U^{d+|\mathbb i~|}}$$
+
 
 ### Monte-Carlo estimate
 
