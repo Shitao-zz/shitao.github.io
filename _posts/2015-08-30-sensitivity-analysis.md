@@ -35,9 +35,11 @@ Note that $$\mathbb E[\mathbb E[f|x_i]]=\mathbb E[f]$$ and $$\mathbb E[f]$$ and
 $$\mathbb V[f]$$ can be estimated using Monte-Carlo approach. 
 $$\mathbb E[\mathbb E[f|x_i]^2]$$ remains to be calculated.
 
-$$\int_{\mathfrak U^{d+|\mathfrak i \sim|}} f(x_{\mathfrak i},x_{\math_frak
+$$
+\int_{\mathfrak U^{d+|\mathfrak i \sim|}} f(x_{\mathfrak i},x_{\math_frak
 i\sim})f(x_{\mathfrak i},x^'_{\math_frak i\sim})dx_{\mathfrak i}dx_{\mathfrak i
-\sim}dx^'_{\mathfrak i\sim}   $$
+\sim}dx^'_{\mathfrak i\sim}   
+$$
 
 
 ### Monte-Carlo estimate
