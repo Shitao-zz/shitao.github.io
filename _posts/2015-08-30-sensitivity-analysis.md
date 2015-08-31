@@ -37,12 +37,11 @@ $$\mathbb E[\mathbb E[f|x_i]^2]$$ remains to be calculated.
 
 $$\int_{U^{d+|i \sim|}} f(x_i,x_{i\sim})f(x_i,x_{i\sim}')dx_i
 dx_{i\sim}dx_{i\sim}'
+=\int_{U^{|\mathfrak i|}}dx_i \int_{U^{|i\sim|}} f(x_i,x_{i\sim})dx_{i\sim} 
+\int_{U^{|i\sim|}} f(x_i,x_{i\sim}')dx_{i\sim}'
+=\int_{U^|i|}dx_i[\int_{U^|i\sim|}f(x_i,x_{i\sim})dx_{i\sim}]^2
 $$ 
 
-$$
-f(x_i,x_{i\sim})f(x_i,x_{i\sim}^')dx_i
-dx_{i\sim}dx_{i\sim}^'
-$$
 
 ### Monte-Carlo estimate
 
