@@ -53,7 +53,11 @@ dx_{i\sim}dx_{i\sim}'
 $$ 
 
 $$
-\mathbb E[\mathbb E[f|x_i]^2]=lim\limits_{M\rightarrow \infty}
+\mathbb E[\mathbb E[f|x_i]^2]= 
+$$
+
+$$
+\lim\limits_{M \rightarrow \infty}
 $$
 
 $$
