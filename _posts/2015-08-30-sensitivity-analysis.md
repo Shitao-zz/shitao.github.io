@@ -54,13 +54,7 @@ $$
 
 $$
 \mathbb E[\mathbb E[f|x_i]^2]= 
-$$
-
-$$
 \lim\limits_{M \rightarrow \infty}
-$$
-
-$$
 \frac{1}{M}\sum\limits_{l=1}^M f(x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})f(\tilde{x}_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)})
 $$
 
@@ -68,3 +62,5 @@ $$x_{\{i\}\sim}^{(l)},x_{\{i\}}^{(l)}\ \mbox{and}\ \tilde x_{\{i\}\sim}^{(l)}$$
 are independent samples.
 
 ### Polynomila Chaos expansion estimate
+
+Under construction
