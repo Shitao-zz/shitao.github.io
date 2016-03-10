@@ -1,7 +1,6 @@
 ---
 layout: post
-title: A feature-based loop current shedding prediction using logistic
-regression
+title: A feature-based loop current shedding prediction using logistic regression
 tags: [Loop current, eddy shedding, logistic regression]
 ---
 
