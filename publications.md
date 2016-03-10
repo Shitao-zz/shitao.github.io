@@ -19,9 +19,19 @@ pubs:
     title: "Forward Propagation of Uncertainty and Sensitivity Analysis in an
 	Integral Oil-Gas Plume Model"
     keywords: "Uncertainty Quantification"
-    month: "June"
-    year: "2015"
-    booktitle: "In preparation"
+    month: "Feb"
+    year: "2016"
+    booktitle: "JGR oceans (in revision)"
+ 
+  - key: "IskandaraniWang2015"
+    author: "Wang, S., Iskandarani, M., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
+    title: "An overview of uncertainty quantification techniques with
+application to oceanic and oil-spill simulations"
+    keywords: "Uncertainty Quantification"
+    month: "Feb"
+    year: "2016"
+    booktitle: "JGR oceans (in revision)"
+
 mets:
   - key: "tallahassee2014"
     author: "Wang, S., Iskandarani, M., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
