@@ -17,15 +17,16 @@ recorded searching points. The eddy shedding event is defined as the searching
 points do not go over 25.5N.
 
 ### Tracking steps
-Step1:  Obtaining the data that defines the contour lines. The following Matlab function will helps.
+
+-Step1:  Obtaining the data that defines the contour lines. The following Matlab function will helps.
 {%highlight matlab%}
 [C h] = contour()
 {%endhighlight%}
 
-Step2:  initializing the contour tracking from some point (around 21N in this
+-Step2:  initializing the contour tracking from some point (around 21N in this
 case). 
 
-Step3: Searching the closest new point (only less than 10 close points are searched) 
+-Step3: Searching the closest new point (only less than 10 close points are searched) 
 and repeating this searching process. Recording all the searched points.
 
 
@@ -50,8 +51,8 @@ detached in a specific simulation is a binary problem that can be expressed in 0
 or 1. Here, we build a simple logistic regression model, also called generalized
 linear models, to achieve this goal.
 
-At a specific day, a 1*798 binary vector (whether eddy detachment occurs in the
-trainning set) and a 8*798 perturbation vector are used to calculate the optimal
+At a specific day, a 1\*798 binary vector (whether eddy detachment occurs in the
+trainning set) and a 8\*798 perturbation vector are used to calculate the optimal
 coefficients for logistic regression model.
 
 We can estimate the probability of eddy shedding event from a specific
