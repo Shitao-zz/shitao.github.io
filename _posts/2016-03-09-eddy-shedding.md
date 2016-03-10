@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A feature-based loop current shedding prediction using logistic regression
-tags: [Loop current, eddy shedding, logistic regression]
+tags: [Loop-current, eddy-shedding, logistic-regression]
 ---
 
 > Loop current eddy is tracked using 17cm SSH contour. An classification algorithm 
@@ -11,11 +11,11 @@ tags: [Loop current, eddy shedding, logistic regression]
 
 ### SSH contour tracking
 
-img src="/imagesi/eddy-shedding/shedding_track.png" class="floatpic">
+<img src="/imagesi/eddy-shedding/shedding_track.png" class="floatpic">
 
 
 ### Results from a training set
-img src="/imagesi/eddy-shedding/shedding_statistics.png" class="floatpic">
+<img src="/imagesi/eddy-shedding/shedding_statistics.png" class="floatpic">
 
 ### Logistic regression for prediction 
 
