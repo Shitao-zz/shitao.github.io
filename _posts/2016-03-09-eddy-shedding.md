@@ -39,12 +39,22 @@ perturbed in this trainning set.
 Caption: the number of eddy detached realizations out of the entire training
 set. 
 
-<img src="/images/eddy-shedding/shedding_statistics.png">
+<img src="/images/eddy-shedding/perturbation.png">
 Caption: Histogram of each perturbation in the eddy detached realizations on
 different day. The axis label for all boxes in the figure is on top right. 
 
-### Logistic regression for prediction 
+## Logistic regression for prediction 
+The objective of this analysis is to construct a simple model which estimates
+probability of an eddy shedding event at a specific day.  Whether the eddy
+detached in a specific simulation is a binary problem that can be expressed in 0
+or 1. Here, we build a simple logistic regression model, also called generalized
+linear models, to achieve this goal.
 
+At a specific day, a 1*798 binary vector (whether eddy detachment occurs in the
+trainning set) and a 8*798 perturbation vector are used to calculate the optimal
+coefficients for logistic regression model.
 
+We can estimate the probability of eddy shedding event from a specific
+perturbation setup when the optimal coefficients are available.
 
 
