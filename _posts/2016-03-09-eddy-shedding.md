@@ -11,7 +11,7 @@ tags: [Loop-current, eddy-shedding, logistic-regression]
 
 ### SSH contour tracking
 
-<img src="/images/eddy-shedding/shedding_track.png" class="floatpic">
+<img src="/images/eddy-shedding/shedding_track.png">
 The first step of SSH contour tracking is to obtain the data that defines the
 contour lines. 
 {%highlight matlab%}
@@ -27,7 +27,7 @@ recorded searching points. The eddy shedding event is defined as the searching
 points do not go over 25.5N.
 
 ### Results from a training set
-<img src="/images/eddy-shedding/shedding_statistics.png" class="floatpic">
+<img src="/images/eddy-shedding/shedding_statistics.png">
 
 ### Logistic regression for prediction 
 
