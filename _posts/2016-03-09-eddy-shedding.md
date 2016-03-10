@@ -16,7 +16,7 @@ The first step of SSH contour tracking is to obtain the data that defines the
 contour lines. 
 {%hightlight matlab%}
 [C h] = contour()
-{%hight%}
+{%endhighlight%}
 
 Next, initializing the contour tracking from some point (around 21N in this
 case). Searching the closest new point (only less than 10 points are searched) 
