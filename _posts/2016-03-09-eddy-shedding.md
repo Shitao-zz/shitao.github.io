@@ -14,7 +14,7 @@ tags: [Loop-current, eddy-shedding, logistic-regression]
 <img src="/images/eddy-shedding/shedding_track.png" class="floatpic">
 The first step of SSH contour tracking is to obtain the data that defines the
 contour lines. 
-{%hightlight matlab%}
+{%highlight matlab%}
 [C h] = contour()
 {%endhighlight%}
 
