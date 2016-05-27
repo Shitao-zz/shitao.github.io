@@ -16,12 +16,13 @@ pubs:
 
   - key: "wang2015"
     author: "Wang, S., Iskandarani, M., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
-    title: "Forward Propagation of Uncertainty and Sensitivity Analysis in an
+    title: "Propagation of Uncertainty and Sensitivity Analysis in an
 	Integral Oil-Gas Plume Model"
     keywords: "Uncertainty Quantification"
     month: "Feb"
     year: "2016"
-    booktitle: "JGR oceans (in revision)"
+	url: "http://onlinelibrary.wiley.com/doi/10.1002/2015JC011365/full"
+    booktitle: "JGR oceans"
  
   - key: "IskandaraniWang2015"
     author: "Wang, S., Iskandarani, M., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
@@ -30,7 +31,8 @@ application to oceanic and oil-spill simulations"
     keywords: "Uncertainty Quantification"
     month: "Feb"
     year: "2016"
-    booktitle: "JGR oceans (in revision)"
+	url: "http://onlinelibrary.wiley.com/doi/10.1002/2015JC011366/full"
+    booktitle: "JGR oceans"
 
 mets:
   - key: "tallahassee2014"
