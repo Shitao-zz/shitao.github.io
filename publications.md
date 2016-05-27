@@ -25,7 +25,7 @@ pubs:
     booktitle: "JGR oceans"
  
   - key: "IskandaraniWang2015"
-    author: "Wang, S., Iskandarani, M., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
+    author: "Iskandarani, M., Wang, S., Srinivasan, A., Thacker, C., Winoku, J., & Knio, O. M"
     title: "An overview of uncertainty quantification techniques with
 application to oceanic and oil-spill simulations"
     keywords: "Uncertainty Quantification"
