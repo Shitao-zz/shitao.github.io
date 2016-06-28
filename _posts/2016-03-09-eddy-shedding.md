@@ -19,10 +19,12 @@ in which the searching points do not go over 25.5N.
 
 ### Tracking steps
 
-*Step1: Obtaining the data that defines the contour lines. 
-*Step2: Initializing the contour tracking from some point (around 21N in this case). 
-*Step3: Searching the closest new point (only less than 10 close points are searched) 
-and repeating this searching process. Recording all the searched points.
+- Step1: Obtaining the data that defines the contour lines; 
+- Step2: Initializing the contour tracking from some point (around 21N in this
+	case);
+- Step3: Searching the closest new point (only less than 10 close points are searched) 
+and repeating this searching process;
+- Step4: The eddy shedding event is defined as the realization in which the searching points do not go over 25.5N.
 
 ### Results from a training set
 
