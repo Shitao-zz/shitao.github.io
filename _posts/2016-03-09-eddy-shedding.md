@@ -18,13 +18,9 @@ points do not go over 25.5N.
 
 ### Tracking steps
 
--Step1:  Obtaining the data that defines the contour lines. The following Matlab function will helps.
-{%highlight matlab%}
-[C h] = contour()
-{%endhighlight%}
+-Step1:  Obtaining the data that defines the contour lines. 
 
--Step2:  initializing the contour tracking from some point (around 21N in this
-case). 
+-Step2:  Initializing the contour tracking from some point (around 21N in this case). 
 
 -Step3: Searching the closest new point (only less than 10 close points are searched) 
 and repeating this searching process. Recording all the searched points.
@@ -58,4 +54,7 @@ coefficients for logistic regression model.
 We can estimate the probability of eddy shedding event from a specific
 perturbation setup when the optimal coefficients are available.
 
+<img src="/images/eddy-shedding/logistic_regression.png">
+Caption: Marginal probability of eddy shedding event associated with different
+initial perturbations derived from a trained logistic regression model.
 
