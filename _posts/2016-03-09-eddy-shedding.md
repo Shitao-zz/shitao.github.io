@@ -12,13 +12,15 @@ tags: [Loop-current, eddy-shedding, logistic-regression]
 ## SSH contour tracking
 
 <img src="/images/eddy-shedding/shedding_track.png">
+
 The thin black contour is the 17cm SSH contour line and the blue stars are the
 recorded searching points. The eddy shedding event is defined as the realization
 in which the searching points do not go over 25.5N.
 
 ### Tracking steps
--Step1:  Obtaining the data that defines the contour lines. 
--Step2:  Initializing the contour tracking from some point (around 21N in this case). 
+
+-Step1: Obtaining the data that defines the contour lines. 
+-Step2: Initializing the contour tracking from some point (around 21N in this case). 
 -Step3: Searching the closest new point (only less than 10 close points are searched) 
 and repeating this searching process. Recording all the searched points.
 
@@ -29,9 +31,11 @@ are used as our training set. The simulating period is from May 1, 2010 to May
 perturbed in this trainning set.
 
 <img src="/images/eddy-shedding/shedding_statistics.png">
+
 Caption: The cumulative number of eddy detached realizations as a function of time. 
 
 <img src="/images/eddy-shedding/perturbation.png">
+
 Caption: Histograms of each perturbation in the eddy detached realizations at
 different time. The axis label for all boxes in the figure is on top right. 
 
@@ -50,6 +54,7 @@ We can estimate the probability of eddy shedding event from a specific
 perturbation setup when the optimal coefficients are available.
 
 <img src="/images/eddy-shedding/logistic_regression.png">
+
 Caption: Marginal probability of eddy shedding event associated with different
 initial perturbations derived from a trained logistic regression model.
 
