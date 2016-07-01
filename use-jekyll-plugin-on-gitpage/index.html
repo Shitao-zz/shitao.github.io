@@ -1,0 +1,318 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A simple way to use jekyll plugins on GitHub Pages &#8211; Shitao Wang</title>
+
+<meta name="keywords" content="jekyll, plugins, GitHub">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="A simple way to use jekyll plugins on GitHub Pages &#8211; Shitao Wang">
+<meta property="og:description" content="> [GitHub Pages] provide user a decent way to publish their static web pages or> blogs. As we all know, custom plugin...">
+<meta property="og:url" content="/use-jekyll-plugin-on-gitpage">
+<meta property="og:site_name" content="Shitao Wang">
+
+
+
+
+
+<link rel="canonical" href="/use-jekyll-plugin-on-gitpage">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="/assets/css/ie.css">
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<meta name="keywords" content="jekyll, plugins, GitHub"/>
+
+
+</head>
+
+<body class="post" itemscope itemtype="http://schema.org/WebPage">
+
+<!--[if lt IE 9]><div class="chrome-frame alert alert-info"><strong>Your browser is really old!</strong> <a href="http://browsehappy.com/">Why not upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better enjoy this site?</div><![endif]-->
+
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="">Shitao Wang</a>
+	</div><!-- /.site-name -->
+  
+	<div class="top-navigation">
+		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		    <ul>
+		        
+            <li><a href="/" >About Me</a></li>
+		        
+            <li><a href="/projects/" >Projects</a></li>
+		        
+            <li><a href="/publications/" >Publications</a></li>
+		        
+            <li><a href="/experience/" >Experience</a></li>
+		        
+            <li><a href="/Blog/" >Blog</a></li>
+		        
+            <li><a href="/tags/" >Tags</a></li>
+		        
+            <li><a href="/personal/" >Personal</a></li>
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <div class="article-author-top">
+    <img src="/images/icon.jpg" class="bio-photo" alt="Shitao Wang bio photo" width="100" height="100"></a>
+<!-- <h4>Shitao Wang</h4> -->
+<p></p>
+<p style="text-indent:0;margin-top:1.5em;"><a href="mailto:swang@rsmas.miami.edu" target="_blank"><i class="icon-mail"></i> Email</a></p>
+
+
+
+<p style="text-indent:0;"><a href="http://linkedin.com/profile/view?id=243187667&trk=nav_responsive_tab_profile" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a></p>
+
+<p style="text-indent:0;"><a href="http://github.com/shitao" target="_blank"><i class="icon-github"></i> Github</a></p>
+
+
+
+  </div>
+  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <div class="headline-wrap">
+      <h1 itemprop="headline">A simple way to use jekyll plugins on GitHub Pages</h1>
+      <h2 class="post-date">09 Jul 2015</h2>
+              
+
+
+
+
+
+
+
+<a href="/tag/GitHub">#GitHub</a>
+
+<a href="/tag/jekyll">#jekyll</a>
+
+<a href="/tag/plugins">#plugins</a>
+
+
+
+
+     <h2></h2> 
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap" itemprop="text">
+      <blockquote>
+  <p><a href="http://pages.github.com/">GitHub Pages</a> provide user a decent way to publish their static web pages or
+blogs. As we all know, custom plugins are disabled when the <code>safe</code> mode is on.
+Here, I would like to illustrate a simple way to allow jekyll plugins in the
+<a href="http://pages.github.com/">GitHub Pages</a>.</p>
+</blockquote>
+
+<p>The solution is as follows: build a <code>master</code> branch with compiled website and <code>source</code> branch with all our website sources.</p>
+
+<h3 id="step1-build-a-github-repository-for-the-web-pages">Step1: Build a <a href="http://github.com/">GitHub</a> repository for the web pages</h3>
+
+<p>Here, I illustrate an example to publish a web using the special repository
+dedicated to the <a href="http://pages.github.com/">GitHub Pages</a> files. This special repository mush be named as <code>username.github.io</code>.</p>
+
+<h3 id="step2-prepare-the-repository">Step2: Prepare the repository</h3>
+<p>Create a <code>source</code> branch in our repository to store all the web pages sources.
+    $ git checkout -b source master
+    $ git push -u origin source
+Make the <code>source</code> branch <em>default</em> on your GitHub.</p>
+
+<h3 id="step3-rakefile-to-publish-web-pages-automatically">Step3: Rakefile to publish web pages automatically</h3>
+
+<p>Now, you can push your compiled <code>sources</code> into the master branch to publish. Use
+the following Rakefile will automatically publish your web pages.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;rake&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;rdoc&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;date&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;tmpdir&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;jekyll&#39;</span>
+
+<span class="n">desc</span> <span class="s2">&quot;Generate blog files&quot;</span>
+<span class="n">task</span> <span class="ss">:generate</span> <span class="k">do</span>
+  <span class="no">Jekyll</span><span class="o">::</span><span class="no">Site</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Jekyll</span><span class="o">.</span><span class="n">configuration</span><span class="p">({</span>
+    <span class="s2">&quot;source&quot;</span>      <span class="o">=&gt;</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;destination&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;_site&quot;</span>
+  <span class="p">}))</span><span class="o">.</span><span class="n">process</span>
+<span class="k">end</span>
+
+<span class="n">desc</span> <span class="s2">&quot;Generate and publish blog to gh-pages&quot;</span>
+<span class="n">task</span> <span class="ss">:publish</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:generate</span><span class="o">]</span> <span class="k">do</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">mktmpdir</span> <span class="k">do</span> <span class="o">|</span><span class="n">tmp</span><span class="o">|</span>
+    <span class="nb">system</span> <span class="s2">&quot;mv _site/* </span><span class="si">#{</span><span class="n">tmp</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;git checkout -B master&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;rm -rf *&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;mv </span><span class="si">#{</span><span class="n">tmp</span><span class="si">}</span><span class="s2">/* .&quot;</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Site updated at </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">utc</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;git add .&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;git commit -am </span><span class="si">#{</span><span class="n">message</span><span class="o">.</span><span class="n">shellescape</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;git push origin master --force&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;git checkout master&quot;</span>
+    <span class="nb">system</span> <span class="s2">&quot;echo yolo&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="n">task</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="ss">:publish</span></code></pre></div>
+
+<p>Then, you can run <code>rake publish</code> to compile and publish your website to <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          <img src="/images/icon.jpg" class="bio-photo" alt="Shitao Wang bio photo" width="100" height="100"></a>
+<!-- <h4>Shitao Wang</h4> -->
+<p></p>
+<p style="text-indent:0;margin-top:1.5em;"><a href="mailto:swang@rsmas.miami.edu" target="_blank"><i class="icon-mail"></i> Email</a></p>
+
+
+
+<p style="text-indent:0;"><a href="http://linkedin.com/profile/view?id=243187667&trk=nav_responsive_tab_profile" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a></p>
+
+<p style="text-indent:0;"><a href="http://github.com/shitao" target="_blank"><i class="icon-github"></i> Github</a></p>
+
+
+
+        </div>
+        <p class="byline"><strong>A simple way to use jekyll plugins on GitHub Pages</strong> was published on <time datetime="2015-07-09T00:00:00-04:00" itemprop="datePublished">July 09, 2015</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="/" title="About Shitao Wang" itemprop="url">Shitao Wang</a></span></span>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    
+    <br />
+    <br />
+  
+<div class="related">
+  <h3>Related Posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/eddy-shedding">
+            A feature-based loop current shedding prediction using logistic regression
+            <small>09 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/sensitivity-analysis">
+            Global Sensitivity Analysis
+            <small>30 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/adaptive-metropolis-algorithm">
+            Adptive Metropolis Algorithm
+            <small>27 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+<br />
+<br />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'shitao';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="/Blog">View all blogs</a>)</small></h4>
+    <ul>
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    <h6>&copy; 2016 Shitao Wang.
+  Published with <a href="http://pages.github.com/" rel="nofollow">GitHub Pages</a>,
+  powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>,
+  based on the <a href="http://mademistakes.com/" rel="nofollow">Minimal Mistakes</a> theme.
+</h6>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/main.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7325266-2', 'shitaowang.com');
+  ga('send', 'pageview');
+
+</script>
+
+	        
+
+</body>
+</html>
