@@ -59,6 +59,6 @@ perturbation setup when the optimal coefficients are available.
 
 <img src="/images/eddy-shedding/logistic_regression.png">
 
->Caption: Marginal probability of eddy shedding event associated with different
-initial perturbations derived from a trained logistic regression model.
+>Caption: Conditional probability of eddy shedding event associated with different
+initial perturbations derived from a trained logistic regression model at Day 29.
 
