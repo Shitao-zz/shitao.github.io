@@ -28,3 +28,7 @@ Make the `source` branch _default_ on your GitHub.
 
 Now, you can push your compiled `sources` into the master branch to publish. Use
 the Rakefile under source branch will automatically publish your web pages.
+
+
+[GitHub Pages]: http://pages.github.com/ 
+[GitHub]: http://github.com/ 
